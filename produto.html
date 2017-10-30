@@ -4,48 +4,47 @@
         <title>Meu E-Commerce</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js" async></script>
+        <script type="text/javascript" src="js/bootstrap.min.js" async></script>
 	<script type="text/javascript" src="js/funcoes.js" async></script>
         
         <link rel="shortcut icon" href="imgs/icon.png">
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toogle collapsed"
-                        data-toggle="collapse"
-                        data-target="#menu"
-                    aria-expanded="false">
-                    <span class="sr-only">Menu de Navegação</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+        <nav class="navbar navbar-fixed">
+            <div class="container-fluid">
+              <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
                 </button>
-                <div class="pull-right hidden-lg visible-xs">
-                    <a href="javascript:;" 
-                       class="btn btn-default busca">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </a>
-                    <a href="javascript:;" 
-                       class="btn btn-default logar">
-                        <i class="glyphicon glyphicon-user"></i>
-                    </a>
-                    <a href="javascript:;" 
-                       class="btn btn-default">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                    </a>
+                <div class="pull-right visible-xs">
+                  <a href="javascript:;" class="waves-effect waves-light btn buscar"><i class="material-icons">search</i></a>
+                  <a href="javascript:;" class="waves-effect waves-light btn logar"><i class="material-icons">portrait</i></a>
+                  <a href="carrinho.html" class="waves-effect waves-light btn"><i class="material-icons">shopping_cart</i></a>
                 </div>
-                
-                <a class="navbar-brand" href="index.html">
-                    <img src="imgs/logo.png" 
-                         alt="Empresa LTDA" title="Empresa LTDA" />
-                </a>
-                
+
+                <a class="navbar-brand" href="index.html"><img class="responsive-img" src="imgs/logo.png" alt="AkiExpress" title="AkiPexpress"></a>
+
+              </div>
+              <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav navbar-right">
+
+                  <li class="hidden-xs"><a href="javascript:;" class="waves-effect waves-light btn buscar"><i class="material-icons">search</i></a></li>
+                  <li class="hidden-xs"><a href="javascript:;" class="waves-effect waves-light btn logar"><i class="material-icons">portrait</i></a></li>
+                  <li class="hidden-xs"><a href="carrinho.html" class="waves-effect waves-light btn"><i class="material-icons">shopping_cart</i></a></li>
+                </ul>
+
+              </div>
             </div>
-            
         </nav>
         
         
@@ -67,43 +66,41 @@
             <div id="msg"></div>
             
             <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col m4 s4 xl12">
                     <div class="thumbnail foto"></div>
                 </div>
-                <div class="col-md-8 col-sm-8 col-xs-12 descricao">
+                <div class="col m8 s8 xl12 descricao">
                     
                 </div> 
             </div>
         </main>
         
-        <footer class="container">
-            <img src="imgs/logo.png" alt="Nome da Empresa"
-                 title="Nome da Empresa">
-            <p>E-commerce.com - Desenvolvimento BSN</p>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <img class="responsive-img" src="imgs/logo.png" alt="Nome da Empresa" title="Nome da Empresa">
+                        <p>E-commerce.com - Desenvolvimento BSN</p>
+                    </div>
+                </div>
+            </div>
         </footer>
-        
+
         <div class="mascara" id="login">
-            <div class="well text-center">
-                <h3>Efetuar Login</h3>
-                <form name="form" class="form text-center">
-                    
-                    <label for="email" class="control-label">
-                        E-mail</label>
-                    <input type="email" name="email" id="email"
-                           class="form-control input-lg"
-                           placeholder="Por favor, digite seu e-mail">
-                    
-                    <label for="senha" class="form-control">Senha</label>
-                    <input type="password" name="senha" id="senha" 
-                           class="form-control input-lg" 
-                           placeholder="Digite aqui a seua senha.">
-                    
-                    <button type="button" 
-                            class="btn btn-danger btn-lg">Cancelar</button>
-                            
-                    <button type="button" 
-                            class="btn btn-success btn-lg">Logar</button>
-                    
+            <div class="row">
+                <form class="col l6 s12" name="form">
+                    <div class="row">
+                        <div class="input-field col l12 s12">
+                            <input type="email" name="email" id="email" class="form-control input-lg white-text text-darken-1" placeholder="Por favor, digite seu e-mail">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="input-field col l12 s12">
+                            <input type="password" name="senha" id="senha" class="form-control input-lg white-text text-darken-1" placeholder="Digite aqui a seua senha.">
+                            <label for="senha">Senha</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-logar">Logar<i class="material-icons right">send</i></button>
+                    <button class="btn waves-effect waves-light btn-cancelar">Cancelar<i class="material-icons right">cancel</i></button>
                 </form>
             </div>
         </div>
