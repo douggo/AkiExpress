@@ -35,15 +35,15 @@ $(document).ready(function() {
         var nomeCliente =
                 sessionStorage
                 .getItem("nome");
-        var texto = "Seja bem vindo "
-        +nomeCliente+" (ID: "+idCliente+" )\n\
+        var texto = "<p class='white-text text-darken-1'>Seja bem-vindo: "
+        +nomeCliente+" (ID: "+idCliente+" )</p>\n\
         <br /><br />\n\
         <button type='button'\n\
-        class='btn btn-danger btn-sm btn-cancelar'>\n\
-        Cancelar</button>\n\
+        class='btn waves-effect waves-light btn-cancelar'>\n\
+        Cancelar<i class='material-icons right'>cancel</i></button>\n\
         <button type='button' \n\
-        class='btn btn-danger \n\
-        btn-sair btn-sm'>Sair</button>";
+        class='btn waves-effect waves-light \n\
+        btn-sair btn-sm'>Sair<i class='material-icons right'>exit_to_app</i></button>";
         
         $("#login form").html(texto);
         
